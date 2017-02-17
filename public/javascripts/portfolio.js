@@ -1,15 +1,12 @@
-var folder = "public/images/";
+/*var folder = "https://gogogohuang.github.io/public/images/";
 
-//var folder = "https://gogogohuang.github.io/public/images/";
-
-
-/*
 function portfolio(folder_name) {
     folder += folder_name + "/";
     $.ajax({
         url: folder,
-        success: function(data) {
-            console.log(data);
+        type: "GET",
+        complete: function(data) {
+            console.log("5566");
             var patt1 = /"([^"]*\.(jpe?g|png|gif))"/gi; // extract "*.jpeg" or "*.jpg" or "*.png" or "*.gif"
             var result = data.match(patt1);
             result = result.map(function(el) { return el.replace(/"/g, ""); }); // remove double quotes (") surrounding filename+extension // TODO: do this at regex!
@@ -35,18 +32,16 @@ function portfolio(folder_name) {
         }
     });
 }
-
 */
-function portfolio(folder_name) {
+var folder = "public/images/"
+
+function portfolio(folder_name, num) {
     folder += folder_name + "/";
     var fileextension = ".jpg"; // image format
     var i = "1";
-    console.log("123");
     $(function imageloop() {
         $("#slider").append("<img src='" + folder + i + fileextension + "' alt=''>"); // finaly add to HTML
-        if (i == 13) {
-            alert('loaded');
-        } else {
+        if (i != num) {
             i++;
             imageloop();
         };
