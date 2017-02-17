@@ -33,14 +33,14 @@ function portfolio(folder_name) {
     });
 }
 */
-var folder = "public/images/"
+var folder = "../public/images/"
 
 function portfolio(folder_name, num) {
     folder += folder_name + "/";
     var fileextension = ".jpg"; // image format
     var i = "1";
     $(function imageloop() {
-        $("#slider").append("<img src='" + folder + i + fileextension + "' alt=''>"); // finaly add to HTML
+        $("#portfolioThumbs").append("<img src='" + folder + i + fileextension + "' alt=''>"); // finaly add to HTML
         if (i != num) {
             i++;
             imageloop();

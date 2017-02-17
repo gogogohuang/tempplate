@@ -6,12 +6,12 @@ body {
 .container {
     position: absolute;
     width: 100%;
-    heigh: 100%;
     text-align: center;
     top: 40%;
     left: 0;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, 0.4);
 }
 
 .container p {
@@ -48,13 +48,13 @@ body {
 h1 {
     position: relative;
     text-align: center;
-    font-family: 'Vollkorn', sans-serif;
+    /*font-family: 'Vollkorn', sans-serif;*/
 }
 
 .button_container {
     position: fixed;
-    top: 5%;
-    right: 2%;
+    top: 4.5%;
+    right: 5%;
     height: 27px;
     width: 35px;
     cursor: pointer;
