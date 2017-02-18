@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 .header {
     top: 0;
     left: 0;
@@ -15,6 +15,16 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.portfolioThumbs {
+    opacity: 1;
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    /*height: 20%;*/
+    overflow: hidden;
+}
+
 .portfolioThumbs-content {
     width: 100%;
     height: 100%;
@@ -26,23 +36,14 @@
     display: block;
 }
 
-.portfolioThumbs {
-    opacity: 1;
-    position: relative;
-    box-sizing: border-box;
-    float: left;
-    width: 33%;
-    height: 20%;
-    overflow: hidden;
-}
-
 .portfolioThumbs-img {
     width: 100%;
-    margin: 7% 7% 0 7%;
+    margin: 9% 9% 0 9%;
+    transition: 0.5s ease-out;
 }
 
 .portfolioThumbs-img:hover {
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .portfolioThumbs-titile {
@@ -52,6 +53,52 @@
     cursor: pointer;
 }
 
+.pt-container {
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.portfolioContent {
+    position: relative;
+    width: 100%;
+    display: none;
+}
+
+.portfolioContent-title {
+    /*display: none;*/
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.portfolioContent-images {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 2% 7% 5% 7%;
+}
+
+.portfolioContent-images img {
+    opacity: 1;
+    /*width: 100%;*/
+    display: block;
+    height: 150px;
+    overflow: hidden;
+}
+
+.portfolioContent-line {
+    position: relative;
+    bottom: 0;
+    transform-origin: 0 100%;
+    height: 2px;
+    /* Line width of 3 */
+    background: #000;
+    /* Black fill */
+}
+
+
+}
 @media (min-width: 768px) {
     .header {
         top: 0;

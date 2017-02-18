@@ -12,8 +12,12 @@
     <link rel='stylesheet' , href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.6.0/venobox.css">
     <!--javascripts-->
     <script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.6.0/venobox.min.js"></script>
     <script src="../public/javascripts/portfolio.js"></script>
     <script src="../public/javascripts/nav.js"></script>
+    <script src="../public/javascripts/venobox-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js"></script>
+
 </head>
 <html>
 
@@ -30,35 +34,22 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="views/portfolio.html">Portfolio</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 </div>
 <section class="portfolioThumbs-content">
-    <div class="portfolioThumbs">
-        <img class="portfolioThumbs-img" src="../public/images/portfolio/pomelo.jpg">
-        <div class="portfolioThumbs-titile">Pomelo</div>
-    </div>
-    <div class="portfolioThumbs">
-        <img class="portfolioThumbs-img" src="../public/images/portfolio/strangers.jpg">
-        <div class="portfolioThumbs-titile">Strangers</div>
-    </div>
-    <div class="portfolioThumbs">
-        <img class="portfolioThumbs-img" src="../public/images/portfolio/code-155-20000.jpg">
-        <div class="portfolioThumbs-titile">Code:155/20000</div>
-    </div>
-    <div class="portfolioThumbs">
-        <img class="portfolioThumbs-img" src="../public/images/portfolio/alice.jpg">
-        <div class="portfolioThumbs-titile">Alice</div>
-    </div>
-    <div class="portfolioThumbs">
-        <img class="portfolioThumbs-img" src="../public/images/portfolio/animal.jpg">
-        <div class="portfolioThumbs-titile">Animal</div>
-    </div>
+    <script>
+        photopage("pomelo", 5)
+    </script>
 
+
+    <div class=pt-container>
+        <script>
+            portfolio("portfolio")
+        </script>
+    </div>
 </section>
-
-
 
 </html>

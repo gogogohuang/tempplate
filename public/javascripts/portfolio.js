@@ -33,17 +33,90 @@ function portfolio(folder_name) {
     });
 }
 */
-var folder = "../public/images/"
 
-function portfolio(folder_name, num) {
-    folder += folder_name + "/";
+var base_folder = "../public/images/"
+var portfolioimages = ["pomelo", "strangers", "thailand", "alice", "animal"];
+var portfolioimagesNum = [5, 6, 0, 0, 0];
+
+function showPhoto(idname) {
+    for (i in portfolioimages) {
+        if (portfolioimages[i] === idname) {
+            $('#' + portfolioimages[i]).css('display', 'block');
+        } else {
+            $('#' + portfolioimages[i]).css('display', 'none');
+        }
+    }
+}
+
+
+function portfolio(folder_name) {
+    var folder = base_folder + folder_name + "/";
     var fileextension = ".jpg"; // image format
-    var i = "1";
-    $(function imageloop() {
-        $("#portfolioThumbs").append("<img src='" + folder + i + fileextension + "' alt=''>"); // finaly add to HTML
-        if (i != num) {
-            i++;
-            imageloop();
-        };
-    });
+    for (i in portfolioimages) {
+
+        var newNode = document.createElement('div');
+        newNode.className = 'portfolioThumbs';
+        document.getElementsByClassName("pt-container")[0].appendChild(newNode);
+
+
+        newNode = document.createElement('img');
+        newNode.className = 'portfolioThumbs-img';
+        newNode.alt = '';
+        newNode.src = folder + portfolioimages[i] + fileextension;
+        //newNode.id = portfolioimages[i];
+
+        document.getElementsByClassName("portfolioThumbs")[i].appendChild(newNode);
+
+        newNode = document.createElement('div');
+        newNode.className = 'portfolioThumbs-titile';
+        newNode.innerHTML = portfolioimages[i][0].toUpperCase() + portfolioimages[i].slice(1);
+        newNode.id = portfolioimages[i];
+        newNode.setAttribute('onclick', 'showPhoto("' + portfolioimages[i] + '")');
+
+
+        document.getElementsByClassName("portfolioThumbs")[i].appendChild(newNode);
+        /*
+                $("#portfolioimages[i]").lazyload({
+                    placeholder: "img/grey.gif",
+                    event: "click"
+                });
+          */
+    }
+}
+
+function photopage(folder_name, num) {
+    var fileextension = ".jpg"; // image format
+    for (i in portfolioimages) {
+        var newNode = document.createElement('div');
+        newNode.className = 'portfolioContent';
+        newNode.id = portfolioimages[i];
+        document.getElementsByClassName("portfolioThumbs-content")[0].appendChild(newNode);
+
+    }
+
+    for (i in portfolioimages) {
+        var folder = base_folder + portfolioimages[i] + "/";
+
+        var newNode = document.createElement('div');
+
+        newNode = document.createElement('div');
+        newNode.className = 'portfolioContent-title';
+        newNode.innerHTML = "<h2>" + portfolioimages[i][0].toUpperCase() + portfolioimages[i].slice(1) + "</h2>";
+        document.getElementById(portfolioimages[i]).appendChild(newNode);
+
+        for (var j = 1; j <= portfolioimagesNum[i]; j++) {
+            newNode = document.createElement('div');
+            newNode.className = 'portfolioContent-images';
+            /*a(class = "venobox vbox-item", data - gall = "PoGallery", href = "")*/
+
+            newNode.innerHTML =
+                "<a class=\'venobox vbox-item\', data-gall=\'" + portfolioimages[i] + "\', href=" + folder + j + fileextension + ">" +
+                "<img src=" + folder + j + fileextension + ">";
+            document.getElementById(portfolioimages[i]).appendChild(newNode);
+            ``
+        }
+        newNode = document.createElement('div');
+        newNode.className = 'portfolioContent-line';
+        document.getElementById(portfolioimages[i]).appendChild(newNode);
+    }
 }
