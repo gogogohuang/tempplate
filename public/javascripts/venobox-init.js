@@ -1,5 +1,8 @@
 $(document).ready(function() {
-
+    $("img.lazy").lazyload({
+        effect: "fadeIn",
+        effectspeed: 200,
+    });
     /* default settings */
     $('.venobox').venobox();
 
