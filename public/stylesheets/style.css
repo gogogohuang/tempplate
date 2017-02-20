@@ -20,8 +20,9 @@
     position: relative;
     box-sizing: border-box;
     float: left;
-    width: 25%;
+    width: 30%;
     /*height: 20%;*/
+    margin: 0 1.5%;
     overflow: hidden;
 }
 
@@ -37,7 +38,6 @@
 
 .portfolioThumbs-img {
     width: 100%;
-    margin: 9% 9% 0 9%;
     transition: 0.5s ease-out;
     cursor: pointer;
 }
@@ -94,8 +94,9 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -50%;
+    left: -30%;
     right: 0;
+    height: 90%;
 }
 
 .portfolioContent-images img:hover {
@@ -142,24 +143,16 @@
     padding-left: 20%;
 }
 
-
-}
-@media (min-width: 768px) {
+@media screen and (max-width: 650px) {
     .header {
-        top: 0;
-        float: 0;
-        width: 30%;
-        text-transform: uppercase;
-        text-decoration: none;
         font-size: 12px;
-        display: block;
     }
-    
+    .portfolioThumbs {
+        width: 45%;
+        /*height: 20%;*/
+        margin: 0 2.5%;
+    }
     .portfolioContent-images img {
-        opacity: 1;
-        /*width: 100%;*/
-        display: block;
-        height: 25%;
-        overflow: hidden;
+        height: 80%;
     }
 }
