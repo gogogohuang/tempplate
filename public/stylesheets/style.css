@@ -8,6 +8,11 @@
     display: block;
 }
 
+.header a {
+    color: black;
+    text-decoration: none
+}
+
 .header h1 {
     text-transform: uppercase;
     text-decoration: none;
