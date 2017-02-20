@@ -35,10 +35,12 @@ function portfolio(folder_name) {
 */
 
 var base_folder = "../public/images/"
-var portfolioimages = ["pomelo", "strangers", "thailand", "alice", "animal", "wedding"];
-var portfolioimagesNum = [5, 5, 5, 5, 5, 5];
+var portfolioimages = ["pomelo", "strangers", "thailand", "alice", "animal", "wedding", "kailash", "india"];
+var portfolioimagesNum = [5, 5, 5, 5, 5, 5, 5, 5];
 
 function showPhoto(idname) {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+
     for (i in portfolioimages) {
         if (portfolioimages[i] === idname) {
             $('#' + portfolioimages[i]).css('display', 'block');
@@ -47,7 +49,6 @@ function showPhoto(idname) {
         }
     }
 }
-
 
 function portfolio(folder_name) {
     var folder = base_folder + folder_name + "/";
@@ -76,12 +77,7 @@ function portfolio(folder_name) {
 
 
         document.getElementsByClassName("portfolioThumbs")[i].appendChild(newNode);
-        /*
-                $("#portfolioimages[i]").lazyload({
-                    placeholder: "img/grey.gif",
-                    event: "click"
-                });
-          */
+
     }
 }
 
