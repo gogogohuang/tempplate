@@ -35,8 +35,8 @@ function portfolio(folder_name) {
 */
 
 var base_folder = "../public/images/"
-var portfolioimages = ["pomelo", "strangers", "thailand", "alice", "animal", "wedding", "kailash", "india"];
-var portfolioimagesNum = [5, 5, 5, 5, 5, 5, 5, 5];
+var portfolioimages = ["pomelo", "strangers", "thailand", "alice", "animal", "wedding", "kailash", "india", "nepal"];
+var portfolioimagesNum = [5, 5, 5, 5, 5, 5, 5, 5, 5];
 
 function showPhoto(idname) {
     $("html, body").animate({ scrollTop: 0 }, 600);
